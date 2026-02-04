@@ -151,8 +151,8 @@ Asegúrate de tener instalados los siguientes componentes:
     {
       "name": "Simón Bolívar",
       "email": "libertador@ejemplo.com",
-      "password": "123",
-      "password_confirmation": "123"
+      "password": "123456",
+      "password_confirmation": "123456"
     }
     ```
 
@@ -162,7 +162,7 @@ Asegúrate de tener instalados los siguientes componentes:
     ```json
     {
       "email": "libertador@ejemplo.com",
-      "password": "123"
+      "password": "123456"
     }
     ```
 
