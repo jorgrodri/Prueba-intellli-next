@@ -265,7 +265,7 @@ Asegúrate de tener instalados los siguientes componentes:
 ## 📊 Reportes (Requiere Token)
 
 ### Exportar Excel
-*   **Endpoint:** `GET /api/export/books`
+*   **Endpoint:** `GET /api/export/library`
 *   **Descripción:** Descarga directa del archivo .xlsx
 
 ---
