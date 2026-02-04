@@ -30,7 +30,13 @@ COPY . /var/www/html
 
 # 7. Solucionar el error de Git "dubious ownership" y ejecutar Composer
 RUN git config --global --add safe.directory /var/www/html && \
-    composer install --no-interaction --optimize-autoloader --no-dev
+    composer install --no-interaction --optimize-autoloader
+
+# 7.1. Ejecutamos los tests
+RUN ./vendor/bin/phpunit
+
+# 7.2. Eliminamos dependencias de desarrollo para dejar la imagen ligera
+RUN composer install --no-interaction --optimize-autoloader --no-dev
 
 # 8. Ajustamos los permisos de las carpetas
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
